@@ -17,8 +17,8 @@ jobs:
     - name: Build with Maven
       run: mvn --batch-mode --update-snapshots package
     - name: Run compile
-      run: mvn -f /TZ2-part-two -B compile
+      run: mvn -f /TZ2-part-two/pom.xml -B compile
     - name: Run tests
-      run: mvn -f /TZ2-part-two -B test
+      run: mvn -f /TZ2-part-two/pom.xml -B test
     - name: Run clear
-      run: mvn -f /TZ2-part-two -B clear
+      run: mvn -f /TZ2-part-two/pom.xml -B clear
