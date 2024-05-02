@@ -1,7 +1,5 @@
 package org.example;
 
-import org.junit.Test;
-
 import java.io.File;
 import java.io.IOException;
 import org.jfree.chart.ChartUtils;
@@ -16,7 +14,9 @@ import org.jfree.chart.ChartPanel;
 import org.jfree.chart.JFreeChart;
 import org.jfree.data.xy.XYSeries;
 import org.jfree.data.xy.XYSeriesCollection;
-import static org.junit.Assert.assertEquals;
+
+import org.junit.jupiter.api.Test;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class tests {
     public long time_of_min(String fileName) throws IOException {
