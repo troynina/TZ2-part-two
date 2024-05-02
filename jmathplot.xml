@@ -1,9 +1,0 @@
-<component name="libraryTable">
-  <library name="jmathplot">
-    <CLASSES>
-      <root url="jar://$PROJECT_DIR$/../../../../Program Files/Java/jdk-17/lib/jmathplot.jar!/" />
-    </CLASSES>
-    <JAVADOC />
-    <SOURCES />
-  </library>
-</component>
