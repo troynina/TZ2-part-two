@@ -14,5 +14,8 @@ jobs:
       with:
         java-version: '11'
         distribution: 'adopt'
-    - name: Build and test with Gradle
-      run: ./gradlew build
+    - name: Build project
+      run: javac *.java
+
+    - name: Run tests
+      run: java Test
