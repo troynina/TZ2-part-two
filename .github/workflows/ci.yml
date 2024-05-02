@@ -19,3 +19,13 @@ jobs:
 
     - name: Run tests
       run: mvn -B test --file pom.xml
+    - name: Notify on failure with failed tests info
+      if: failure()
+      run: |
+        failed_tests=$(mvn test | grep -E "\[ERROR\] Tests? in error:" -A1 | grep -v "\[ERROR\]")
+        curl -s -X POST https://api.telegram.org/bot6937500913:AAFoNqVeKmYnIXJGNMGsLMQRF4PAuXKQh5o/sendMessage -d chat_id=812154388 -d text="Some tests failed. Look at details: $failed_tests"
+
+    - name: Notify on success
+      if: success()
+      run: |
+        curl -s -X POST https://api.telegram.org/bot6937500913:AAFoNqVeKmYnIXJGNMGsLMQRF4PAuXKQh5o/sendMessage -d chat_id=812154388 -d text="всё ок"
