@@ -14,8 +14,7 @@ jobs:
       with:
         java-version: '11'
         distribution: 'adopt'
-    - name: Build project
-      run: javac *.java
-
+    - name: Build with Maven
+      run: mvn --batch-mode --update-snapshots package
     - name: Run tests
-      run: java Test
+      run: mvn test
