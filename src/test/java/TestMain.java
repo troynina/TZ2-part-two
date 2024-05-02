@@ -1,7 +1,7 @@
-package org.example;
-
 import java.io.File;
 import java.io.IOException;
+
+import org.example.Main;
 import org.jfree.chart.ChartUtils;
 import org.jfree.chart.ChartFactory;
 import org.jfree.chart.JFreeChart;
@@ -10,13 +10,14 @@ import org.jfree.data.xy.XYSeriesCollection;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class Test {
+public class TestMain {
     public long time_of_min(String fileName) throws IOException {
         long startTime = System.currentTimeMillis();
         long mn = Main._min(Main.read_File(fileName));
         long endTime = System.currentTimeMillis();
         return endTime - startTime;
     }
+
     @org.junit.jupiter.api.Test
     public void testMin() throws IOException {
         assertEquals(1, Main._min(Main.read_File("numbers.txt")));
