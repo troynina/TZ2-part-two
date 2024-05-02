@@ -10,3 +10,5 @@
 5. Построен график зависимости времени выполнения функции min от количества чисел в файле. График сохраняется в файл histogram.png
 
 ### Настройка CI-системы
+
+![example workflow](https://github.com/troynina/TZ2-part-two/actions/workflows/ci.yml/badge.svg)
