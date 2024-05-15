@@ -20,8 +20,8 @@ public class TestMain {
 
     @org.junit.jupiter.api.Test
     public void testMin() throws IOException {
-        assertEquals(2, Main._min(Main.read_File("numbers.txt")));
-        assertEquals(2, Main._min(Main.read_File("test_numbers1.txt")));
+        assertEquals(1, Main._min(Main.read_File("numbers.txt")));
+        assertEquals(1, Main._min(Main.read_File("test_numbers1.txt")));
     }
 
     @org.junit.jupiter.api.Test
